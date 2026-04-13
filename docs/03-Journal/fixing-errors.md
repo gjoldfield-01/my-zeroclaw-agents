@@ -216,4 +216,4 @@ zeroclaw channel bind-telegram <code>
 
 ---
 
-> **Clean one-line diagnosis:** Everything works except LinkedIn authentication — and that's the single point of failure stopping the full system.
+> **Clean one-line diagnosis:** Everything works easily except LinkedIn authentication — make suer you use a good MCP solutions as i found that's the single point of failure stopping the full system from working.
