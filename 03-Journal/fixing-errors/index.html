@@ -1,0 +1,1986 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Personal agent experiment log — building AI-powered workflows as a Super Individual">
+      
+      
+        <meta name="author" content="Gemma Oldfield">
+      
+      
+      
+        <link rel="prev" href="../../05-Workflow/workflow/">
+      
+      
+        <link rel="next" href="../../04-Showcase/best-results/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Troubleshooting Journal - Gemma Oldfield's ZeroClaw Lab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting-journal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Gemma Oldfield&#39;s ZeroClaw Lab" class="md-header__button md-logo" aria-label="Gemma Oldfield's ZeroClaw Lab" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gemma Oldfield's ZeroClaw Lab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Troubleshooting Journal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02-Agents/Nova/IDENTITY/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../05-Workflow/workflow/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Workflow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Troubleshooting Journal
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../04-Showcase/best-results/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Showcase
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Gemma Oldfield&#39;s ZeroClaw Lab" class="md-nav__button md-logo" aria-label="Gemma Oldfield's ZeroClaw Lab" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Gemma Oldfield's ZeroClaw Lab
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Agents/Nova/IDENTITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Agents/Nova/SOUL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soul
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Agents/Nova/SKILL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Agents/Nova/USER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Agents/Nova/STYLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Workflow/workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting Journal
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting Journal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1 — Initial Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1 — Initial Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-telegram-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2 — Telegram Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2 — Telegram Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-mcp-setup-linkedin-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3 — MCP Setup (LinkedIn Tools)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 3 — MCP Setup (LinkedIn Tools)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issues_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-4-agent-build-local-success-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4 — Agent Build (Local Success Only)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 4 — Agent Build (Local Success Only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-5-agent-architecture-delegation-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5 — Agent Architecture / Delegation Failure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 5 — Agent Architecture / Delegation Failure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-6-environment-auth-separation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6 — Environment &amp; Auth Separation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 6 — Environment &amp; Auth Separation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issues_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-7-linkedin-oauth-main-blocker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 7 — LinkedIn OAuth (Main Blocker)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 7 — LinkedIn OAuth (Main Blocker)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issues_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-identified-not-yet-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix (identified, not yet completed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-8-token-performance-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 8 — Token &amp; Performance Issue
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 8 — Token &amp; Performance Issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-not-yet-implemented" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix (not yet implemented)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-9-switching-linkedin-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 9 — Switching LinkedIn MCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-cause-summary-the-big-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause Summary — The Big 4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-system-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final System State
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Showcase/best-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Showcase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1 — Initial Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1 — Initial Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-telegram-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2 — Telegram Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2 — Telegram Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-mcp-setup-linkedin-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3 — MCP Setup (LinkedIn Tools)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 3 — MCP Setup (LinkedIn Tools)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issues_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-4-agent-build-local-success-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4 — Agent Build (Local Success Only)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 4 — Agent Build (Local Success Only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-5-agent-architecture-delegation-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5 — Agent Architecture / Delegation Failure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 5 — Agent Architecture / Delegation Failure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-6-environment-auth-separation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6 — Environment &amp; Auth Separation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 6 — Environment &amp; Auth Separation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issues_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-7-linkedin-oauth-main-blocker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 7 — LinkedIn OAuth (Main Blocker)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 7 — LinkedIn OAuth (Main Blocker)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issues_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-identified-not-yet-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix (identified, not yet completed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-8-token-performance-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 8 — Token &amp; Performance Issue
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 8 — Token &amp; Performance Issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-cause_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-not-yet-implemented" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix (not yet implemented)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-9-switching-linkedin-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 9 — Switching LinkedIn MCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-cause-summary-the-big-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause Summary — The Big 4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-system-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final System State
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="troubleshooting-journal">Troubleshooting Journal</h1>
+<p><em>What broke, why, and how it was fixed.</em></p>
+<hr />
+<h2 id="phase-1-initial-setup">Phase 1 — Initial Setup</h2>
+<p><strong>Status:</strong> ✅ Resolved</p>
+<h3 id="issues">Issues</h3>
+<ul>
+<li>Node runtime error: <code>Unexpected token '?'</code></li>
+<li>OpenRouter errors: <code>402 Payment Required</code>, <code>401 Unauthorized</code></li>
+<li>Config warnings: invalid keys (<code>model_settings</code>)</li>
+</ul>
+<h3 id="root-cause">Root Cause</h3>
+<ul>
+<li>Outdated Node version (v12) — incompatible with modern JS</li>
+<li>Invalid/expired OpenRouter API key</li>
+<li>Token limits too high for available credits</li>
+</ul>
+<h3 id="fix">Fix</h3>
+<ul>
+<li>Installed NVM → upgraded to Node v24</li>
+<li>Replaced OpenRouter API key</li>
+<li>Adjusted token usage and cleaned config</li>
+</ul>
+<h3 id="outcome">Outcome</h3>
+<p>✅ ZeroClaw runs
+✅ LLM working reliably</p>
+<hr />
+<h2 id="phase-2-telegram-integration">Phase 2 — Telegram Integration</h2>
+<p><strong>Status:</strong> ✅ Resolved</p>
+<h3 id="issues_1">Issues</h3>
+<ul>
+<li>404 API error</li>
+<li>No messages received</li>
+<li>Confusion between gateway vs channel</li>
+</ul>
+<h3 id="root-cause_1">Root Cause</h3>
+<ul>
+<li>Incorrect bot token (copied wrong value)</li>
+<li>Telegram not properly added as a channel</li>
+</ul>
+<h3 id="fix_1">Fix</h3>
+<ul>
+<li>Regenerated token via BotFather</li>
+<li>Used correct commands:</li>
+</ul>
+<pre><code class="language-bash">zeroclaw channel add telegram
+zeroclaw channel bind-telegram &lt;code&gt;
+</code></pre>
+<h3 id="outcome_1">Outcome</h3>
+<p>✅ Telegram bot connected and receiving messages</p>
+<hr />
+<h2 id="phase-3-mcp-setup-linkedin-tools">Phase 3 — MCP Setup (LinkedIn Tools)</h2>
+<p><strong>Status:</strong> ⚠️ Partial</p>
+<h3 id="issues_2">Issues</h3>
+<ol>
+<li>Duplicate <code>[mcp]</code> config blocks</li>
+<li><code>command not found</code> / empty command</li>
+<li>MCP connected but tools unusable</li>
+</ol>
+<h3 id="root-cause_2">Root Cause</h3>
+<ul>
+<li>TOML misconfiguration (duplicate sections)</li>
+<li>MCP binary not in PATH (NVM environment issue)</li>
+<li>MCP not authenticated — no LinkedIn token</li>
+</ul>
+<h3 id="fix_2">Fix</h3>
+<ul>
+<li>Cleaned config to single <code>[mcp]</code> block</li>
+<li>Fixed PATH / Node environment</li>
+</ul>
+<h3 id="outcome_2">Outcome</h3>
+<p>✅ MCP server connected
+✅ Tools visible (6 tools)
+❌ Not usable yet (auth missing)</p>
+<hr />
+<h2 id="phase-4-agent-build-local-success-only">Phase 4 — Agent Build (Local Success Only)</h2>
+<p><strong>Status:</strong> ⚠️ Partial</p>
+<h3 id="issue">Issue</h3>
+<ul>
+<li>Module not found error</li>
+</ul>
+<h3 id="root-cause_3">Root Cause</h3>
+<ul>
+<li>File saved as <code>.py</code> instead of <code>.js</code></li>
+</ul>
+<h3 id="fix_3">Fix</h3>
+<ul>
+<li>Renamed file correctly</li>
+</ul>
+<h3 id="outcome_3">Outcome</h3>
+<p>✅ Agent works locally
+❌ Not integrated into ZeroClaw</p>
+<hr />
+<h2 id="phase-5-agent-architecture-delegation-failure">Phase 5 — Agent Architecture / Delegation Failure</h2>
+<p><strong>Status:</strong> ❌ Unresolved</p>
+<h3 id="issue_1">Issue</h3>
+<ul>
+<li>Unknown config key: <code>routes</code> / <code>tools</code></li>
+</ul>
+<h3 id="root-cause_4">Root Cause</h3>
+<ul>
+<li>Using ZeroClaw v0.1.7 — new agent architecture not supported</li>
+</ul>
+<h3 id="outcome_4">Outcome</h3>
+<p>❌ Delegation not working
+❌ Agent not callable by system</p>
+<hr />
+<h2 id="phase-6-environment-auth-separation">Phase 6 — Environment &amp; Auth Separation</h2>
+<p><strong>Status:</strong> ⚠️ Partial</p>
+<h3 id="issues_3">Issues</h3>
+<ul>
+<li>"LinkedIn tools not initializing"</li>
+<li>Env vars not visible in daemon runtime</li>
+</ul>
+<h3 id="root-cause_5">Root Cause</h3>
+<ul>
+<li>Daemon running in different environment than shell</li>
+<li>Env vars not injected into systemd process</li>
+</ul>
+<h3 id="fix_4">Fix</h3>
+<ul>
+<li>Added <code>.env</code> file</li>
+<li>Injected into systemd service</li>
+</ul>
+<h3 id="outcome_5">Outcome</h3>
+<p>✅ LLM + env confirmed working
+⚠️ MCP still not auto-loading</p>
+<hr />
+<h2 id="phase-7-linkedin-oauth-main-blocker">Phase 7 — LinkedIn OAuth (Main Blocker)</h2>
+<p><strong>Status:</strong> ❌ Unresolved</p>
+<h3 id="issues_4">Issues</h3>
+<ol>
+<li>Redirect URI mismatch</li>
+<li>OAuth flow never completed</li>
+<li>No access token generated</li>
+</ol>
+<h3 id="root-cause_6">Root Cause</h3>
+<ul>
+<li>Mismatch between LinkedIn app settings and OAuth request URL</li>
+<li>OAuth callback ≠ ZeroClaw server</li>
+</ul>
+<h3 id="fix-identified-not-yet-completed">Fix (identified, not yet completed)</h3>
+<ul>
+<li>Correct redirect URI: <code>http://localhost:3000/auth/linkedin/callback</code></li>
+<li>Complete OAuth flow: get code → exchange for access_token</li>
+</ul>
+<h3 id="outcome_6">Outcome</h3>
+<p>❌ No LinkedIn access token
+❌ MCP cannot authenticate
+❌ Posting not possible</p>
+<hr />
+<h2 id="phase-8-token-performance-issue">Phase 8 — Token &amp; Performance Issue</h2>
+<p><strong>Status:</strong> ⚠️ Identified, not fixed</p>
+<h3 id="issue_2">Issue</h3>
+<ul>
+<li>Very high token usage (~22k tokens per session)</li>
+</ul>
+<h3 id="root-cause_7">Root Cause</h3>
+<ul>
+<li>Entire system context sent on each call: memory, MCP schemas, conversation history</li>
+</ul>
+<h3 id="fix-not-yet-implemented">Fix (not yet implemented)</h3>
+<ul>
+<li>Separate agents / reduce context per agent</li>
+<li>Avoid exposing all tools to main agent</li>
+</ul>
+<hr />
+<h2 id="phase-9-switching-linkedin-mcp">Phase 9 — Switching LinkedIn MCP</h2>
+<p><strong>Status:</strong> (To be completed — notes to add)</p>
+<p><em>Planned update: document the switch to a different LinkedIn MCP server, the reasoning behind it, and the outcome.</em></p>
+<hr />
+<h2 id="root-cause-summary-the-big-4">Root Cause Summary — The Big 4</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Version Mismatch</strong> — ZeroClaw v0.1.7 doesn't support new agent architecture</td>
+<td>Broke delegation completely</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Environment Separation</strong> — shell ≠ daemon</td>
+<td>MCP + API keys not consistently available</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Configuration Errors</strong> — duplicate TOML blocks, wrong tokens</td>
+<td>Repeated setup failures</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>LinkedIn OAuth</strong> — redirect mismatch, flow never completed</td>
+<td>No access token = no LinkedIn functionality</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="final-system-state">Final System State</h2>
+<p><strong>Working:</strong></p>
+<ul>
+<li>ZeroClaw daemon</li>
+<li>OpenRouter (LLM)</li>
+<li>Telegram bot</li>
+<li>Node environment</li>
+<li>MCP (visible, 6 tools)</li>
+<li>Agent (local only)</li>
+</ul>
+<p><strong>Not Working:</strong></p>
+<ul>
+<li>LinkedIn authentication</li>
+<li>MCP runtime integration</li>
+<li>Agent delegation</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Clean one-line diagnosis:</strong> Everything works except LinkedIn authentication — and that's the single point of failure stopping the full system.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
