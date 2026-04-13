@@ -78,7 +78,7 @@ Weeny Jeanie acts as a personal thinking partner — not just a content generato
 
 ## Navigation
 
-- [Agent Identity](02-Agents/Nova/IDENTITY.md)
+- [Agent Identity](02-Agents/WeenyJeanie/IDENTITY.md)
 - [Workflow Design](05-Workflow/workflow.md)
 - [Troubleshooting Journal](03-Journal/fixing-errors.md)
 - [Showcase](04-Showcase/best-results.md)

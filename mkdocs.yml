@@ -14,12 +14,13 @@ theme:
 
 nav:
   - Home: index.md
+  - Configuration: 01-Configuration/index.md
   - Architecture:
-      - Identity: 02-Agents/Nova/IDENTITY.md
-      - Soul: 02-Agents/Nova/SOUL.md
-      - Skills: 02-Agents/Nova/SKILL.md
-      - User Profile: 02-Agents/Nova/USER.md
-      - Style Guide: 02-Agents/Nova/STYLE.md
+      - Identity: 02-Agents/WeenyJeanie/IDENTITY.md
+      - Soul: 02-Agents/WeenyJeanie/SOUL.md
+      - Skills: 02-Agents/WeenyJeanie/SKILL.md
+      - User Profile: 02-Agents/WeenyJeanie/USER.md
+      - Style Guide: 02-Agents/WeenyJeanie/STYLE.md
   - Workflow: 05-Workflow/workflow.md
   - Troubleshooting Journal: 03-Journal/fixing-errors.md
   - Showcase: 04-Showcase/best-results.md
