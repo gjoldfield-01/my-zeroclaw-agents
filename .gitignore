@@ -1,0 +1,7 @@
+site/
+.obsidian/
+.DS_Store
+*.log
+secrets.toml
+config.toml
+.env

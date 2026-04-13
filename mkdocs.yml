@@ -1,0 +1,25 @@
+site_name: Gemma Oldfield's ZeroClaw Lab
+site_description: "Personal agent experiment log — building AI-powered workflows as a Super Individual"
+site_author: "Gemma Oldfield"
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Architecture:
+      - Identity: 02-Agents/Nova/IDENTITY.md
+      - Soul: 02-Agents/Nova/SOUL.md
+      - Skills: 02-Agents/Nova/SKILL.md
+      - User Profile: 02-Agents/Nova/USER.md
+      - Style Guide: 02-Agents/Nova/STYLE.md
+  - Workflow: 05-Workflow/workflow.md
+  - Troubleshooting Journal: 03-Journal/fixing-errors.md
+  - Showcase: 04-Showcase/best-results.md
